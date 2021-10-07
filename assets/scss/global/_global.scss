@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'RobotoCondensed';
+  font-style: normal;
+  src: url('../fonts/RobotoCondensed-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoCondensedLight';
+  font-style: normal;
+  src: url('../fonts/RobotoCondensed-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  src: url('../fonts/Oswald-Light.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: RobotoCondensed;
+  transition: all 0.4s ease;
+}
+
+html {
+  overflow: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// h1 {
+//   font-size: 72px;
+//   background: -webkit-linear-gradient(#eee, #333);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }

@@ -1,0 +1,78 @@
+.sidebar__content {
+  padding: 0.5rem;
+  transition: all 200ms ease;
+  .sidebar__toggle {
+    display: flex;
+    align-items: center;
+    // margin-block: 1rem;
+    padding: 0.8rem 1rem;
+    .v-icon {
+      margin-block: 1rem;
+    }
+    .logo {
+      margin-left: 1.5rem;
+      h1 {
+        color: var(--white-400);
+        // font-size: 30pxf;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      color: var(--white-400);
+    }
+  }
+  .nav__item {
+    background: var(--blue-900);
+    margin: 0.1rem;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    .v-icon {
+      color: var(--white-400);
+    }
+    /* //*ANCHOR - Added this style to fix the active sidebar link */
+
+    // &:visited {
+    //   // opacity: 1;
+    //   // background: #fff;
+    // }
+    &:active {
+      background: var(--white-400);
+      opacity: 0.9;
+    }
+    &:focus {
+      background: red;
+      opacity: 0.9;
+    }
+    .nav__title {
+      // font-family: 'Oswald';
+      color: white;
+      margin-inline: 1.5rem;
+      transition: all 0.4s ease;
+      // display: none;
+    }
+  }
+}
+
+// .list-enter,
+// .list-leave-to {
+//   // display: none;
+//   visibility: hidden;
+//   height: 0;
+//   width: 0;
+//   margin: 0;
+//   padding: 0;
+//   opacity: 0;
+// }
+
+// .list-enter-active,
+// .list-leave-active {
+//   transition: all 0.6s ease;
+//   transition: opacity 0.5s;
+// }
+
+a.nuxt-link-active {
+  background-color: red;
+}

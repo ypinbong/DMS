@@ -1,0 +1,22 @@
+.main__container {
+  display: flex;
+
+  .sidebar__container {
+    background: var(--blue-900);
+    min-width: 3%;
+    max-width: 12%;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .main__content {
+    display: flex;
+    width: auto;
+    max-height: 100vh;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
