@@ -74,12 +74,7 @@
         }
       }
       &:hover {
-        background: var(--blue-700);
-      }
-      &:active {
-        background: var(--white-400);
-        color: var(--blue-900);
-        opacity: 0.9;
+        opacity: 0.6;
       }
     }
     .nav__title {
@@ -95,7 +90,14 @@
   }
 }
 
-/* //*ANCHOR - Added this style to fix the active sidebar link */
+// Customize the active router link in the sidebar here
 li.nav__item.nuxt-link-exact-active.nuxt-link-active {
-  background-color: var(--blue-700);
+  background-color: var(--white-300);
+  .v-icon,
+  .nav__title {
+    color: var(--blue-700);
+  }
+  &:hover {
+    // background: rgba(255, 255, 255, 0.83) !important;
+  }
 }
