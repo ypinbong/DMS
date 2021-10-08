@@ -1,78 +1,101 @@
 .sidebar__content {
   padding: 0.5rem;
   transition: all 200ms ease;
-  .sidebar__toggle {
-    display: flex;
-    align-items: center;
-    // margin-block: 1rem;
-    padding: 0.8rem 1rem;
-    .v-icon {
-      margin-block: 1rem;
-    }
-    .logo {
-      margin-left: 1.5rem;
-      h1 {
+  img {
+    position: relative;
+    // top: 1.4rem;
+    top: 0.5rem;
+    // left: 0.6rem;
+    height: 2rem;
+    width: 3rem;
+    align-self: center;
+  }
+  .logo__container {
+    .sidebar__toggle {
+      display: flex;
+      align-items: center;
+      // margin-block: 1rem;
+      padding: 0 1rem;
+      margin-bottom: 4rem;
+      // background: chocolate;
+      .v-icon {
+        margin-block: 1rem;
+      }
+      .logo {
+        margin-left: 1.5rem;
+        h1 {
+          color: var(--white-400);
+          // font-size: 30px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      i {
         color: var(--white-400);
-        // font-size: 30pxf;
       }
     }
-    &:hover {
-      cursor: pointer;
-    }
-    i {
+    .app-title {
+      font-family: 'Oswald';
       color: var(--white-400);
+      border-top: 1px solid var(--white-400);
+      padding-top: 0.5rem;
+      position: absolute;
+      top: 5.6rem;
+      z-index: 1;
+      background: var(--blue-900);
+      left: 1.2rem;
+      // font-size: small;
+      // font-stretch: expanded;
+      text-align: center;
     }
   }
-  .nav__item {
+  .nav__container {
+    background: yellowgreen;
     background: var(--blue-900);
-    margin: 0.1rem;
-    border-radius: 5px;
-    padding: 0.8rem 1rem;
-    text-decoration: none;
-    .v-icon {
-      color: var(--white-400);
-    }
-    /* //*ANCHOR - Added this style to fix the active sidebar link */
-
-    // &:visited {
-    //   // opacity: 1;
-    //   // background: #fff;
-    // }
-    &:active {
-      background: var(--white-400);
-      opacity: 0.9;
-    }
-    &:focus {
-      background: red;
-      opacity: 0.9;
+    margin-top: -5rem;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .nav__item {
+      display: flex;
+      align-items: center;
+      background: var(--blue-900);
+      margin: 0.1rem;
+      border-radius: 5px;
+      padding: 0.8rem 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      .v-icon {
+        color: var(--white-400);
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &:hover {
+        background: var(--blue-700);
+      }
+      &:active {
+        background: var(--white-400);
+        color: var(--blue-900);
+        opacity: 0.9;
+      }
     }
     .nav__title {
-      // font-family: 'Oswald';
       color: white;
       margin-inline: 1.5rem;
-      transition: all 0.4s ease;
-      // display: none;
+    }
+  }
+  .user__corner {
+    padding: 0.8rem 1rem;
+    .v-icon {
+      color: var(--white-400);
     }
   }
 }
 
-// .list-enter,
-// .list-leave-to {
-//   // display: none;
-//   visibility: hidden;
-//   height: 0;
-//   width: 0;
-//   margin: 0;
-//   padding: 0;
-//   opacity: 0;
-// }
-
-// .list-enter-active,
-// .list-leave-active {
-//   transition: all 0.6s ease;
-//   transition: opacity 0.5s;
-// }
-
-a.nuxt-link-active {
-  background-color: red;
+/* //*ANCHOR - Added this style to fix the active sidebar link */
+li.nav__item.nuxt-link-exact-active.nuxt-link-active {
+  background-color: var(--blue-700);
 }
